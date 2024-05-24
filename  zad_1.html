@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: gray;
+            color: orange;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1> Wprowadz dwie daty</h1> <br>
+    Data nr 1: <br>
+    <input type="date" id="data1"> <br > <br> 
+       Data nr 2: <br>
+    <input type="date" id="data2"> <br > <br>
+
+    <input type="button" id="prz" value="pokaz" onclick="funkcja()">
+
+    <br> <div id="result"> </div>
+    <script> 
+    function funkcja() {
+        const data1 = new Date(document.getElementById('data1').value);
+        const data2 = new Date(document.getElementById('data2').value);
+
+            // if {
+                
+            // }
+
+        const roznicaczas = Math.abs(data2 - data1);
+        const roznicadni = Math.ceil(roznicaczas / (1000 * 60 * 60 * 24));
+
+        document.getElementById('result').textContent = `Roznica miedzy datami to ${roznicadni} dni.` ;
+    }
+
+
+    </script>
+</body>
+</html>
